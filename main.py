@@ -7,27 +7,28 @@ from pygame.locals import *
 import random
 import pygame.mixer
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
+def get_file_path(filename):
+    return os.path.join(BASE_DIR, filename)
 
 # 画面サイズ
 SCREEN = Rect(0, 0, 400, 400)
 
 # 画像ファイルのパス
-PADDLE_IMG_PATH = "paddle.png"
-BLOCK_IMG_PATH = "block.png"
-BALL_IMG_PATH = "ball.png"
-ITEM1_IMG_PATH ="apple.png"
-ITEM2_IMG_PATH ="banana.png"
+PADDLE_IMG_PATH = os.path.join("paddle.png")
+BLOCK_IMG_PATH = os.path.join("block.png")
+BALL_IMG_PATH = os.path.join("ball.png")
+ITEM1_IMG_PATH =os.path.join("apple.png")
+ITEM2_IMG_PATH =os.path.join("banana.png")
 
-BACKGROUND_PATH = "background.png"
+BACKGROUND_PATH = os.path.join("background.png")
 
 # 音声ファイルのパス
-PADDLE_SOUND_PATH = "paddle_sound.mp3"
-BLOCK_SOUND_PATH = "block_sound.mp3"
-GAMEOVER_SOUND_PATH = "gameover_sound.mp3"
-ITEM1_SOUND_PATH = "apple_sound.mp3"
-ITEM2_SOUND_PATH = "banana_sound.mp3"
-BACKGROUND_MUSIC_PATH = "canon.mp3"
+PADDLE_SOUND_PATH = os.path.join("paddle_sound.mp3")
+BLOCK_SOUND_PATH = os.path.join("block_sound.mp3")
+GAMEOVER_SOUND_PATH = os.path.join("gameover_sound.mp3")
+ITEM1_SOUND_PATH = os.path.join("apple_sound.mp3")
+ITEM2_SOUND_PATH = os.path.join("banana_sound.mp3")
+BACKGROUND_MUSIC_PATH = os.path.join("canon.mp3")
 
 # バドルのスプライトクラス
 class Paddle(pygame.sprite.Sprite):
